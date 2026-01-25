@@ -8,7 +8,7 @@ WORKDIR /home/gradle/src
 
 RUN gradle remotesignerdemo:buildFatJar --no-daemon
 
-FROM openjdk:17-buster
+FROM openjdk:17.0.2-jdk-slim-bullseye
 
 COPY --from=build /home/gradle/src/remotesignerdemo/build/libs/*.jar /app/remotesignerdemo.jar
 
