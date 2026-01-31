@@ -5,7 +5,7 @@
 # $ docker build -f remotesignerdemo/localbuild.Dockerfile -t remotesignerdemo .
 # then run:
 # $ docker run -it --rm -p 8080:8080 remotesignerdemo
-FROM openjdk:17-buster
+FROM openjdk:17.0.2-jdk-slim-bullseye
 
 COPY ./remotesignerdemo/build/libs/*.jar /app/remotesignerdemo.jar
 
